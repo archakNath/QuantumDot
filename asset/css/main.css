@@ -188,30 +188,17 @@ main {
 }
 
 @media(max-width:700px) {
-    .about-video video {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        width: 90%;
-        border-radius: 10px;
-        height: 40%;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
+
+    #aboutus{
+        flex-direction: column;
+    }
+
+    .about-video{
+        width: 100%;
     }
 
     .about-text {
-        position: absolute;
-        top: 50%;
-        right: -50%;
         width: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 2rem;
-        color: white;
-        border-radius: 10px;
-        transform: rotate(10deg);
     }
 
     .about-text h1 {
@@ -274,6 +261,7 @@ main {
 @media(max-width: 700px) {
     #servicesHeader {
         margin-bottom: 20px;
+        margin-top: 70px;
     }
 
     #servicesHeader h1 {
