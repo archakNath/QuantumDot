@@ -92,9 +92,16 @@ gsap.from(".about-text", {
     }
 })
 
-// Wrap every word and punctuation in a span
-const text = document.getElementById("about-description").textContent;
-document.getElementById("about-description").innerHTML = text.replace(/(\w+|\S)/g, "<span>$&</span>");
+const aboutDescription = document.getElementById("about-description");
+let text = aboutDescription.textContent;
+
+// Wrap each word and punctuation in a span
+aboutDescription.innerHTML = text.replace(/(\w+|\S)/g, "<span>$&</span>");
+
+// Add &nbsp; between each word if the screen width is more than 2000px
+if (window.innerWidth > 2000) {
+  aboutDescription.innerHTML = aboutDescription.innerHTML.replace(/<\/span>(\s*)<span>/g, '</span>&nbsp;&nbsp;&nbsp;<span>');
+}
 
 gsap.from(".about-text", {
     x: "50vw",
@@ -332,4 +339,4 @@ const obs = new IntersectionObserver((entries) => {
     });
 });
 
-obs.observe(video); // Observe the video element
+// obs.observe(video); // Observe the video element
