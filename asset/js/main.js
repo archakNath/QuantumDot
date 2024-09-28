@@ -114,8 +114,9 @@ aboutDescription.innerHTML = text.replace(/(\w+|\S)/g, "<span>$&</span>");
 
 // Add &nbsp; between each word if the screen width is more than 2000px
 if (window.innerWidth > 2000) {
-  aboutDescription.innerHTML = aboutDescription.innerHTML.replace(/<\/span>(\s*)<span>/g, '</span>&nbsp;&nbsp;&nbsp;<span>');
+    aboutDescription.innerHTML = aboutDescription.innerHTML.replace(/<\/span>\s+<span>/g, '</span>&nbsp;&nbsp;&nbsp;<span>');
 }
+
 
 gsap.from(".about-text", {
     x: "50vw",
