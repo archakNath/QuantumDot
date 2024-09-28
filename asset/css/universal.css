@@ -146,22 +146,3 @@ body {
 }
 
 /* ================ NAVIGATION ================== */
-
-nav {
-    padding: 10px 12px;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-nav .logo {
-    width: 50px;
-    border-radius: 10px;
-}
-
-nav .menu {
-    width: 35px;
-    margin-right: 20px;
-}

@@ -1,6 +1,62 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #232222;
+    
 }
+
+header{
+    z-index: 999;
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 1vw;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+header img{
+    width: 3vw;
+    cursor: pointer;
+}
+
+header ul{
+    background-color: white;
+    list-style: none;
+    padding: 2vw;
+    border-radius: 1vw;
+    display: none;
+    flex-direction: column;
+    gap: .6vw;
+}
+
+header ul a{
+    text-decoration: none;
+    color: #313131;
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+@media(max-width: 700px){
+    header{
+        padding: 5vw;
+    }
+    header img{
+        width: 10vw;
+    }
+    header ul{
+        padding: 5vw;
+    }
+
+    header ul a{
+        font-size: 5vw;
+    }
+}
+
 
 main {
     position: relative;
@@ -124,11 +180,6 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
-    .main-title {
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
 
     .main-title h1 {
         font-size: 11vw;
@@ -444,6 +495,11 @@ main {
     text-align: center;
     line-height: .95em;
     margin-block: 5vh;
+    transition: all .2s;
+}
+
+#portfolio h1:hover{
+    color: #487cbe;
 }
 
 #portfolio p:nth-child(3) {
@@ -475,6 +531,7 @@ main {
 
     #portfolio h1 {
         font-size: 18vw;
+        text-decoration: underline;
     }
 
     #portfolio p:nth-child(3) {

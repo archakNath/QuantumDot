@@ -1,3 +1,10 @@
+const menuBtn = document.querySelector("header img");
+const nav = document.querySelector("header ul");
+menuBtn.onclick = () => {
+    menuBtn.style.display = "none";
+    nav.style.display = "flex";
+}
+
 // Wrap every letter in a span for ml7
 document.querySelectorAll('.ml7 .letters').forEach(textWrapper => {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -16,6 +23,7 @@ anime.timeline({ loop: false })
         duration: 1500,  // Duration of the fade-in
         easing: "easeInOutQuad"  // Smooth transition
     })
+    
     // Then, fade in the text container
     .add({
         targets: '.main-title',
