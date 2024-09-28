@@ -1,8 +1,14 @@
-const menuBtn = document.querySelector("header img");
+const menuBtn = document.querySelector("#menuBtn");
+const menuCloseBtn = document.querySelector("#cancelBtn");
 const nav = document.querySelector("header ul");
 menuBtn.onclick = () => {
     menuBtn.style.display = "none";
     nav.style.display = "flex";
+}
+
+menuCloseBtn.onclick = () => {
+    menuBtn.style.display = "block";
+    nav.style.display = "none";
 }
 
 // Wrap every letter in a span for ml7

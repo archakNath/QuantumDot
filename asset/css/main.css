@@ -32,6 +32,7 @@ header ul{
     display: none;
     flex-direction: column;
     gap: .6vw;
+    align-items: end;
 }
 
 header ul a{
