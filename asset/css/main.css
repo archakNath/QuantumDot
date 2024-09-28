@@ -278,10 +278,12 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 5vw;
+    position: relative;
 }
 
 #video-player video {
-    width: 90%;
+    width: 80%;
+    object-fit: cover;
     /* Responsive video */
     height: auto;
     border: 5px solid #fff;
@@ -289,6 +291,24 @@ main {
     margin: 0;
     border: none;
     border-radius: 1vw;
+}
+
+#video-player div{
+    position: absolute;
+    bottom: 1vw;
+    right: 13vw;
+}
+
+#video-player div img{
+    width: 2vw;
+    padding: 1vw;
+    background-color: #31313181;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#video-player div img:hover{
+    background-color: #313131;
 }
 
 #servicesHeader {

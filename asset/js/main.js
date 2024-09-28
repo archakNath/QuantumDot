@@ -348,3 +348,31 @@ const obs = new IntersectionObserver((entries) => {
 });
 
 // obs.observe(video); // Observe the video element
+
+const muteButton = document.getElementById("mute-button");
+muteButton.addEventListener('click', function() {
+    if (video.muted) {
+        video.muted = false; // Unmute the video
+        muteButton.style.backgroundColor = "rgba(0, 128, 0, 0.45)"
+    } else {
+        video.muted = true; // Mute the video
+        muteButton.style.backgroundColor = "#31313181"
+    }
+});
+
+const fullscreenButton = document.getElementById('fullscreenButton');
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        // Request fullscreen
+        video.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+        });
+        fullscreenButton.textContent = 'Exit Fullscreen'; // Change button text
+    } else {
+        // Exit fullscreen
+        document.exitFullscreen();
+        fullscreenButton.textContent = 'Fullscreen'; // Change button text back
+    }
+}
+
+fullscreenButton.addEventListener('click', toggleFullscreen);

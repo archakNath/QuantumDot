@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 200vh; /* Make the body tall enough to enable scrolling */
+    overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+}
+
+#scroll-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; /* Full viewport width */
+    height: 300px; /* Height for the image gallery */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+#image-gallery {
+    display: inline-block; /* Enable inline-block for horizontal scrolling */
+    height: 100%; /* Full height of the container */
+    transition: transform 0.2s ease; /* Smooth scrolling effect */
+}
+
+#image-gallery img {
+    height: 100%; /* Maintain image height within container */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Spacing between images */
+}
