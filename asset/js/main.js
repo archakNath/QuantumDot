@@ -155,15 +155,16 @@ gsap.to("#servicesHeader img", {
     }
 });
 
-gsap.to("#servicesHeader ", {
+gsap.to("#servicesHeader", {
     opacity: 0,
     scale: .8,
     duration: 1,
     scrollTrigger: {
-        trigger: "#services",
-        start: "top 75%",
-        end: "top 20%",
-        scrub: 1
+        trigger: "#servicesHeader",
+        start: "top 40%",
+        end: "top -60%",
+        scrub: 1,
+        pin: true
     }
 });
 
@@ -360,10 +361,10 @@ const muteButton = document.getElementById("mute-button");
 muteButton.addEventListener('click', function() {
     if (video.muted) {
         video.muted = false; // Unmute the video
-        muteButton.style.backgroundColor = "rgba(0, 128, 0, 0.45)"
+        muteButton.src = "/asset/resource/image/icon/mute.svg"
     } else {
         video.muted = true; // Mute the video
-        muteButton.style.backgroundColor = "#31313181"
+        muteButton.src = "/asset/resource/image/icon/unmute.svg"
     }
 });
 

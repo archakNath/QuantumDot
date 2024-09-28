@@ -314,10 +314,9 @@ main {
 
 #servicesHeader {
     background-color: #232222;
-    color: rgb(126, 126, 126);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5vw;
 }
 
 #servicesHeader h1 {
