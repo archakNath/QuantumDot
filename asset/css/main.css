@@ -534,7 +534,7 @@ main {
     font-size: 10vw;
     text-align: center;
     line-height: .95em;
-    margin-block: 5vh;
+    margin-block: 0;
     transition: all .2s;
 }
 
@@ -551,6 +551,20 @@ main {
 #portfolio a {
     color: white;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2vw;
+}
+
+#portfolio iframe{
+    border: none;
+    transform: rotate(-90deg);
+    height: 6.5vw;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    border: .6vw solid white;
+    margin-bottom: 1vw;
 }
 
 
@@ -570,7 +584,7 @@ main {
     }
 
     #portfolio h1 {
-        font-size: 18vw;
+        font-size: 14vw;
         text-decoration: underline;
     }
 
@@ -581,6 +595,12 @@ main {
 
     #portfolio a {
         font-size: 3vw;
+        gap: 5vw;
+    }
+
+    #portfolio iframe{
+        height: 17vw;
+        border: 1.5vw solid white;
     }
 }
 
