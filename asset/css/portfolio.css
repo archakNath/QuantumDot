@@ -1,7 +1,29 @@
 body {
     margin: 0;
-    height: 200vh; /* Make the body tall enough to enable scrolling */
-    overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+    height: 30000vh; /* Increased height for more vertical scroll */
+    overflow-y: scroll;
+    background-color: #232222;
+    color: white;
+}
+
+h1{
+    position: fixed;
+    top: 1vw;
+    left: 3vw;
+}
+
+p{
+    position: fixed;
+    bottom: 2vw;
+    right: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2vw;
+}
+
+p img{
+    height: 1.5vw;
 }
 
 #scroll-container {
@@ -9,20 +31,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100vw; /* Full viewport width */
-    height: 300px; /* Height for the image gallery */
-    overflow: hidden; /* Hide overflow */
-    white-space: nowrap; /* Prevent line breaks */
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 #image-gallery {
-    display: inline-block; /* Enable inline-block for horizontal scrolling */
-    height: 100%; /* Full height of the container */
-    transition: transform 0.2s ease; /* Smooth scrolling effect */
+    display: inline-block;
+    height: 100%;
+    transition: transform 0.2s ease;
+    padding: 0 1vw; /* Padding for the gallery */
+    box-sizing: border-box;
 }
 
 #image-gallery img {
-    height: 100%; /* Maintain image height within container */
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Spacing between images */
+    height: 100%;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    display: none;
 }
