@@ -155,18 +155,33 @@ gsap.to("#servicesHeader img", {
     }
 });
 
-gsap.to("#servicesHeader", {
-    opacity: 0,
-    scale: .8,
-    duration: 1,
-    scrollTrigger: {
-        trigger: "#servicesHeader",
-        start: "top 40%",
-        end: "top -60%",
-        scrub: 1,
-        pin: true
-    }
-});
+if(window.innerWidth < 700){
+    gsap.to("#servicesHeader", {
+        opacity: 0,
+        scale: .8,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#servicesHeader",
+            start: "top 20%",
+            end: "top",
+            scrub: 1,
+            pin: true,
+        }
+    });
+} else {
+    gsap.to("#servicesHeader", {
+        opacity: 0,
+        scale: .8,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#servicesHeader",
+            start: "top 40%",
+            end: "top -60%",
+            scrub: 1,
+            pin: true
+        }
+    });
+}
 
 gsap.to("#services .service-card:nth-child(1)", {
     opacity: 0,

@@ -312,6 +312,26 @@ main {
     background-color: #313131;
 }
 
+@media(max-width:700px){
+    #video-player video{
+        width: 95%;
+        border-radius: 15px;
+    }
+
+    #video-player div{
+        right: 7vw;
+        bottom: 2vw;
+    }
+
+    #video-player div img{
+        width: 5vw;
+    }
+
+    #video-player div img:hover{
+        background-color: none;
+    }
+}
+
 #servicesHeader {
     background-color: #232222;
     color: rgb(255, 255, 255);
@@ -331,8 +351,8 @@ main {
 
 @media(max-width: 700px) {
     #servicesHeader {
-        margin-bottom: 20px;
         margin-top: 70px;
+        padding-bottom: 0;
     }
 
     #servicesHeader h1 {
