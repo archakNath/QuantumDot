@@ -166,7 +166,6 @@ if(window.innerWidth < 700){
             end: "top",
             scrub: 1,
             pin: true,
-            markers: true
         }
     });
 } else {
