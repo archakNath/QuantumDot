@@ -337,6 +337,7 @@ main {
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
+    margin-bottom: 7vw;
 }
 
 #servicesHeader h1 {
@@ -587,7 +588,6 @@ main {
 
     #portfolio h1 {
         font-size: 14vw;
-        text-decoration: underline;
     }
 
     #portfolio p:nth-child(3) {

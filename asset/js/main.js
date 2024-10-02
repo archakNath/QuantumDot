@@ -166,6 +166,7 @@ if(window.innerWidth < 700){
             end: "top",
             scrub: 1,
             pin: true,
+            markers: true
         }
     });
 } else {
@@ -175,8 +176,8 @@ if(window.innerWidth < 700){
         duration: 1,
         scrollTrigger: {
             trigger: "#servicesHeader",
-            start: "top 40%",
-            end: "top -60%",
+            start: "top 20%",
+            end: "top -30%",
             scrub: 1,
             pin: true
         }
@@ -376,10 +377,10 @@ const muteButton = document.getElementById("mute-button");
 muteButton.addEventListener('click', function() {
     if (video.muted) {
         video.muted = false; // Unmute the video
-        muteButton.src = "/asset/resource/image/icon/mute.svg"
+        muteButton.src = "/asset/resource/image/icon/unmute.svg"
     } else {
         video.muted = true; // Mute the video
-        muteButton.src = "/asset/resource/image/icon/unmute.svg"
+        muteButton.src = "/asset/resource/image/icon/mute.svg"
     }
 });
 
@@ -399,3 +400,8 @@ function toggleFullscreen() {
 }
 
 fullscreenButton.addEventListener('click', toggleFullscreen);
+
+const aboutVideo = document.querySelector(".about-video video");
+if(window.innerWidth < 700){
+    aboutVideo.src = "/asset/resource/video/qdc square logo loop.mp4";
+}
