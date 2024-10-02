@@ -389,6 +389,8 @@ main {
     width: 40%;
     overflow: hidden;
     border-radius: 1vw 10vw 1vw 1vw;
+    display: flex;
+    justify-content: center;
 }
 
 #services .services-video video {
