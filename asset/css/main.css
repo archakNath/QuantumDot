@@ -636,7 +636,7 @@ main {
     height: 6.5vw;
     aspect-ratio: 1;
     border-radius: 100%;
-    border: .6vw solid white;
+    border: .6vw solid black;
     margin-bottom: 1vw;
 }
 
@@ -675,7 +675,7 @@ main {
 
     #portfolio iframe {
         height: 17vw;
-        border: 1.5vw solid white;
+        border: 1.5vw solid black;
     }
 }
 
