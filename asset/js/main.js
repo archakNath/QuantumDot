@@ -404,3 +404,20 @@ const aboutVideo = document.querySelector(".about-video video");
 if(window.innerWidth < 700){
     aboutVideo.src = "/asset/resource/video/qdc square logo loop.mp4";
 }
+
+window.onload = function() {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+
+    // Check if the page has been refreshed
+    if (!sessionStorage.getItem('hasRefreshed')) {
+        // Set a flag to prevent infinite loop of refreshes
+        sessionStorage.setItem('hasRefreshed', 'true');
+
+        // Refresh the page
+        window.location.reload();
+    } else {
+        // Remove the flag once the page is fully loaded
+        sessionStorage.removeItem('hasRefreshed');
+    }
+};

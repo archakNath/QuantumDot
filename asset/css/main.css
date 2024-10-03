@@ -25,7 +25,7 @@ header img{
 }
 
 header ul{
-    background-color: white;
+    background-color: #232222;
     list-style: none;
     padding: 2vw;
     border-radius: 1vw;
@@ -33,11 +33,12 @@ header ul{
     flex-direction: column;
     gap: .6vw;
     align-items: end;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.126);
 }
 
 header ul a{
     text-decoration: none;
-    color: #313131;
+    color: white;
     font-size: 2vw;
     font-weight: 600;
 }
