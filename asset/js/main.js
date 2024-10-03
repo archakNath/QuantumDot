@@ -144,7 +144,7 @@ gsap.to("#about-description span", {
     }
 });
 
-gsap.to("#servicesHeader img", {
+gsap.to("#servicesHeader img:nth-child(2)", {
     transform: "rotate(-90deg)",
     duration: 1,
     scrollTrigger: {
@@ -269,6 +269,28 @@ gsap.to("#portfolio .img2", {
 
 gsap.to("#portfolio .img3", {
     left: "70%",
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#portfolio",
+        start: "top 60%",
+        end: "top 0%",
+        scrub: 1,
+    }
+})
+
+gsap.from("#portfolio .img4", {
+    right: "-70%",
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#portfolio",
+        start: "top 60%",
+        end: "top 0%",
+        scrub: 1,
+    }
+})
+
+gsap.from("#portfolio .img5", {
+    left: "-70%",
     duration: 1,
     scrollTrigger: {
         trigger: "#portfolio",
@@ -404,20 +426,3 @@ const aboutVideo = document.querySelector(".about-video video");
 if(window.innerWidth < 700){
     aboutVideo.src = "/asset/resource/video/qdc square logo loop.mp4";
 }
-
-window.onload = function() {
-    // Scroll to the top of the page
-    window.scrollTo(0, 0);
-
-    // Check if the page has been refreshed
-    if (!sessionStorage.getItem('hasRefreshed')) {
-        // Set a flag to prevent infinite loop of refreshes
-        sessionStorage.setItem('hasRefreshed', 'true');
-
-        // Refresh the page
-        window.location.reload();
-    } else {
-        // Remove the flag once the page is fully loaded
-        sessionStorage.removeItem('hasRefreshed');
-    }
-};

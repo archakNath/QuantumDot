@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    cursor: none;
 }
 
 body {
@@ -373,10 +374,16 @@ main {
 #servicesHeader h1 {
     margin: 0;
     font-size: 8vw;
-    line-height: .9em;
+    line-height: 7.5vw;
 }
 
-#servicesHeader img {
+#servicesHeader img:nth-child(1){
+    height: 12vw;
+    width: auto;
+    margin-block: auto;
+}
+
+#servicesHeader img:nth-child(2) {
     width: 13vw;
 }
 
@@ -393,6 +400,18 @@ main {
     #servicesHeader img {
         width: 20vw;
     }
+
+    #servicesHeader img:nth-child(1){
+        height: 20vw;
+    }
+
+    #servicesHeader img:nth-child(2){
+        height: 20vw;
+    }
+}
+
+@media(min-width: 1000px){
+
 }
 
 #services {
@@ -521,6 +540,7 @@ main {
     color: white;
     padding-bottom: 50vh;
     background-color: #232222;
+    overflow: hidden;
 }
 
 #portfolio .img1 {
@@ -545,6 +565,26 @@ main {
 
 #portfolio .img3 {
     left: 50%;
+}
+
+#portfolio .img4, #portfolio .img5, #portfolio .img6{
+    width: 30vw;
+    height: fit-content;
+    position: absolute;
+    bottom: 20vh;
+}
+
+#portfolio .img4 {
+    right: 0;
+    width: 25vw;
+}
+
+#portfolio .img5 {
+    left: -5%;
+}
+
+#portfolio .img6 {
+    bottom: -25vh;
 }
 
 #portfolio .text-content {
@@ -608,7 +648,10 @@ main {
     }
 
     #portfolio .img2,
-    #portfolio .img3 {
+    #portfolio .img3,
+    #portfolio .img4,
+    #portfolio .img5,
+    #portfolio .img6 {
         display: none;
     }
 
@@ -644,7 +687,7 @@ footer {
     display: flex;
     font-size: .9vw;
     padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-bottom: 6vh;
 }
 
 footer .about,
