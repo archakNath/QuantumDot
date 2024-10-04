@@ -25,6 +25,14 @@ function handleResize() {
 
 window.addEventListener("resize", handleResize);
 
+document.addEventListener('DOMContentLoaded', function () {
+    var video = document.querySelector('video');
+    video.muted = true; // Ensure video is muted
+    video.play().catch(function (error) {
+        console.log("Autoplay is blocked:", error);
+    });
+});
+
 // Wrap every letter in a span for ml7
 document.querySelectorAll('.ml7 .letters').forEach(textWrapper => {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
