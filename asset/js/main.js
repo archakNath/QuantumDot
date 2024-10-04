@@ -409,6 +409,18 @@ const obs = new IntersectionObserver((entries) => {
     });
 });
 
+const video1 = document.getElementById('myVideo1');
+
+const obs1 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            video1.play(); // Play the video when it's visible
+        } else {
+            video1.pause(); // Pause the video when it's not visible
+        }
+    });
+});
+
 // obs.observe(video); // Observe the video element
 
 const muteButton = document.getElementById("mute-button");
