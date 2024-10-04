@@ -339,6 +339,17 @@ gsap.from("#video-player video", {
     }
 })
 
+gsap.from("#creative-service video", {
+    scale: .8,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#creative-service",
+        start: "top 80%",
+        end: "top 10%",
+        scrub: 1,
+    }
+})
+
 // Get the footer element
 const footer = document.querySelector('footer');
 
