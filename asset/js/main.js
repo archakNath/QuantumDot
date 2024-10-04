@@ -59,7 +59,7 @@ anime.timeline({ loop: false })
         translateX: ["0.55em", 0], // Slight horizontal movement
         translateZ: 0,
         rotateZ: [180, 0],         // Rotate from 180 to 0 degrees
-        duration: 300,
+        duration: 200,
         easing: "easeOutExpo",
         delay: (el, i) => 50 * i   // Delay each letter's animation
     })
@@ -72,14 +72,14 @@ anime.timeline({ loop: false })
     .add({
         targets: '.ml10 .letter',
         rotateY: [-90, 0],  // Rotate each letter from -90 to 0 degrees on the Y-axis
-        duration: 1000,
-        delay: (el, i) => 45 * i  // Delay each letter's animation by 45ms
+        duration: 300,
+        delay: (el, i) => 20 * i  // Delay each letter's animation by 45ms
     });
 
 
 gsap.to("#large-header", {
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
     scrollTrigger: {
         trigger: "#aboutus",
         scroller: "body",
