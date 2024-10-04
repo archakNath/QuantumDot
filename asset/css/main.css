@@ -441,7 +441,7 @@ main {
 
 #services .services-video {
     width: 45%;
-    overflow: hidden;
+    overflow-x: hidden;
     border-radius: 1vw;
     display: flex;
     justify-content: center;
@@ -501,6 +501,7 @@ main {
     }
 
     #services .services-video {
+        display: flex;
         width: 100%;
     }
 
