@@ -17,17 +17,31 @@
 
     <header>
         <nav>
-            <a href="/index.html" style="text-decoration: underline; text-decoration-color: white;text-underline-offset: .5vw; " class="magnet-target"><h1>Home</h1></a>
-            <a href="https://theqdc.builder-preview.com/portfolio" class="magnet-target"><h1>Portfolio</h1></a>
-            <a href="/index.html#footer" class="magnet-target"><h1>Contact</h1></a>
+            <a href="/index.html"
+                style="text-decoration: underline; text-decoration-color: white;text-underline-offset: .5vw; "
+                class="magnet-target">
+                <h1>Home</h1>
+            </a>
+            <a href="https://theqdc.builder-preview.com/portfolio" class="magnet-target">
+                <h1>Portfolio</h1>
+            </a>
+            <a href="/index.html#footer" class="magnet-target">
+                <h1>Contact</h1>
+            </a>
         </nav>
         <!-- <h1>Hello</h1> -->
         <img src="/asset/resource/image/icon/menu.svg" alt="" id="menuBtn">
         <ul>
             <img src="/asset/resource/image/icon/cross.svg" alt="" id="cancelBtn">
-            <a href="/index.html" class="magnet-target"><li>Home</li></a>
-            <a href="https://theqdc.builder-preview.com/portfolio" class="magnet-target"><li>Portfolio</li></a>
-            <a href="/index.html#footer" class="magnet-target"><li>Contact</li></a>
+            <a href="/index.html" class="magnet-target">
+                <li>Home</li>
+            </a>
+            <a href="https://theqdc.builder-preview.com/portfolio" class="magnet-target">
+                <li>Portfolio</li>
+            </a>
+            <a href="/index.html#footer" class="magnet-target">
+                <li>Contact</li>
+            </a>
         </ul>
     </header>
 
@@ -61,7 +75,7 @@
 
     <section id="aboutus">
         <div class="about-video">
-            <video autoplay muted loop>
+            <video autoplay muted defaultMuted loop playsinline preload="metadata">
                 <source src="/asset/resource/video/qdc widescreen logo loop.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -70,7 +84,7 @@
             <h1>About Us</h1>
             <p id="about-description" class="noto-sans">
                 At Quantum Dot Communications, we blend creativity with strategy to build meaningful brand experiences.
-                With over a decade of experience & serving clients in North America and the European Union, we’ve helped
+                With over a decade of experience & serving clients in North America and the European Union, we've helped
                 a diverse range of clients from small businesses, startups to multinational corporations succeed in
                 their professional branding and marketing efforts. Our passion lies in connecting businesses with their
                 audiences through compelling narratives, pixel perfect designs, and effective communication.
@@ -79,7 +93,7 @@
     </section>
 
     <div id="video-player">
-        <video autoplay loop muted id="myVideo">
+        <video autoplay="autoplay" loop muted playsinline id="myVideo" preload="metadata">
             <source src="/asset/resource/video/qdc reel sept 2024 h264 3 mbps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -111,11 +125,8 @@
                 </div>
                 <p class="noto-sans">Logos, visuals, and lead magnets that resonate.</p>
             </div>
-            <div class="services-video">
-                <video autoplay muted loop>
-                    <source src="/asset/resource/video/creative design.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="services-video" id="creative-service">
+                <img src="/asset/resource/video/creative design.gif">
             </div>
         </div>
 
@@ -131,7 +142,7 @@
                 <p class="noto-sans">Uncover your unique voice and position in the market.</p>
             </div>
             <div class="services-video">
-                <video autoplay muted loop>
+                <video autoplay muted defaultMuted loop playsinline preload="metadata">
                     <source src="/asset/resource/video/branding.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -142,6 +153,7 @@
             <div class="text-content">
                 <h1>Digital Marketing</h1>
                 <div class="tags noto-sans">
+                    <span>Campaign And Project Management</span>
                     <span>Social Media Content</span>
                     <span>Analytics</span>
                     <span>Marketing Strategy</span>
@@ -155,7 +167,7 @@
                 <p class="noto-sans">From SEO to social media, we drive results.</p>
             </div>
             <div class="services-video">
-                <video autoplay muted loop>
+                <video autoplay muted defaultMuted loop playsinline preload="metadata">
                     <source src="/asset/resource/video/digital marketing.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -178,7 +190,7 @@
                 <p class="noto-sans">User-centric websites and apps that convert.</p>
             </div>
             <div class="services-video">
-                <video autoplay muted loop>
+                <video autoplay muted defaultMuted loop playsinline preload="metadata">
                     <source src="/asset/resource/video/web and apps.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -201,7 +213,7 @@
                 <p class="noto-sans">Blogs, videos, and compelling narratives.</p>
             </div>
             <div class="services-video">
-                <video autoplay muted loop>
+                <video autoplay muted defaultMuted loop playsinline preload="metadata">
                     <source src="/asset/resource/video/content creation.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -238,7 +250,8 @@
         </div>
         <div class="follow">
             <h1>Follow</h1>
-            <a href="https://www.facebook.com/qdcomm" target="_blank"><img src="/asset/resource/image/icon/facebook.svg" alt=""></a>
+            <a href="https://www.facebook.com/qdcomm" target="_blank"><img src="/asset/resource/image/icon/facebook.svg"
+                    alt=""></a>
         </div>
         <div class="reach-us">
             <h1>Reach us</h1>

@@ -11,6 +11,23 @@ menuCloseBtn.onclick = () => {
     nav.style.display = "none";
 }
 
+
+function handleResize() {
+    if (window.innerWidth > 700) {
+        menuBtn.style.display = "";
+        nav.style.display = "";
+    }
+    else {
+        menuBtn.style.display = "block";
+        nav.style.display = "none";
+    }
+}
+
+window.addEventListener("resize", handleResize);
+
+window.onload = function () {
+    document.getElementById("autoplay1").play();
+}
 // Wrap every letter in a span for ml7
 document.querySelectorAll('.ml7 .letters').forEach(textWrapper => {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -26,17 +43,17 @@ anime.timeline({ loop: false })
     .add({
         targets: '#demo-canvas',
         opacity: 1,  // Fade in the canvas
-        duration: 1500,  // Duration of the fade-in
+        duration: 100,  // Duration of the fade-in
         easing: "easeInOutQuad"  // Smooth transition
     })
-    
+
     // Then, fade in the text container
     .add({
         targets: '.main-title',
         opacity: 1,  // Make the text visible
-        duration: 500,  // Duration of the fade-in
+        duration: 200,  // Duration of the fade-in
         easing: "easeInOutQuad",  // Smooth transition
-        offset: '-=500'  // Start this animation slightly before the canvas finishes fading in
+        offset: '-=200'  // Start this animation slightly before the canvas finishes fading in
     })
     // Start the first animation for ml7
     .add({
@@ -45,7 +62,7 @@ anime.timeline({ loop: false })
         translateX: ["0.55em", 0], // Slight horizontal movement
         translateZ: 0,
         rotateZ: [180, 0],         // Rotate from 180 to 0 degrees
-        duration: 750,
+        duration: 200,
         easing: "easeOutExpo",
         delay: (el, i) => 50 * i   // Delay each letter's animation
     })
@@ -58,14 +75,14 @@ anime.timeline({ loop: false })
     .add({
         targets: '.ml10 .letter',
         rotateY: [-90, 0],  // Rotate each letter from -90 to 0 degrees on the Y-axis
-        duration: 1300,
-        delay: (el, i) => 45 * i  // Delay each letter's animation by 45ms
+        duration: 300,
+        delay: (el, i) => 20 * i  // Delay each letter's animation by 45ms
     });
 
 
 gsap.to("#large-header", {
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
     scrollTrigger: {
         trigger: "#aboutus",
         scroller: "body",
@@ -155,7 +172,7 @@ gsap.to("#servicesHeader img:nth-child(2)", {
     }
 });
 
-if(window.innerWidth < 700){
+if (window.innerWidth < 700) {
     gsap.to("#servicesHeader", {
         opacity: 0,
         scale: .8,
@@ -322,6 +339,17 @@ gsap.from("#video-player video", {
     }
 })
 
+gsap.from("#creative-service video", {
+    scale: .8,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#creative-service",
+        start: "top 80%",
+        end: "top 10%",
+        scrub: 1,
+    }
+})
+
 // Get the footer element
 const footer = document.querySelector('footer');
 
@@ -392,10 +420,22 @@ const obs = new IntersectionObserver((entries) => {
     });
 });
 
+const video1 = document.getElementById('myVideo1');
+
+const obs1 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            video1.play(); // Play the video when it's visible
+        } else {
+            video1.pause(); // Pause the video when it's not visible
+        }
+    });
+});
+
 // obs.observe(video); // Observe the video element
 
 const muteButton = document.getElementById("mute-button");
-muteButton.addEventListener('click', function() {
+muteButton.addEventListener('click', function () {
     if (video.muted) {
         video.muted = false; // Unmute the video
         muteButton.src = "/asset/resource/image/icon/unmute.svg"
@@ -423,6 +463,6 @@ function toggleFullscreen() {
 fullscreenButton.addEventListener('click', toggleFullscreen);
 
 const aboutVideo = document.querySelector(".about-video video");
-if(window.innerWidth < 700){
+if (window.innerWidth < 700) {
     aboutVideo.src = "/asset/resource/video/qdc square logo loop.mp4";
 }

@@ -20,22 +20,22 @@ header {
     align-items: start;
 }
 
-header nav{
+header nav {
     display: flex;
     gap: 2vw;
 }
 
-header nav h1{
+header nav h1 {
     cursor: pointer;
     color: white;
     transition: all .2s;
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
 }
 
-header nav h1:hover{
+header nav h1:hover {
     color: #487cbe;
 }
 
@@ -46,13 +46,15 @@ header img {
 }
 
 header ul {
+    margin-top: -10px;
+    margin-right: -15px;
     background-color: #232222;
     list-style: none;
-    padding: 2vw;
+    padding: 1rem;
     border-radius: 1vw;
     display: none;
     flex-direction: column;
-    gap: .6vw;
+    gap: 1rem;
     align-items: end;
     box-shadow: 0 0 10px rgba(128, 128, 128, 0.126);
 }
@@ -64,6 +66,10 @@ header ul a {
     font-weight: 600;
 }
 
+#cancelBtn {
+    margin-top: -10px;
+}
+
 @media(max-width: 700px) {
     header {
         padding: 5vw;
@@ -71,12 +77,12 @@ header ul a {
         align-items: start;
     }
 
-    header nav{
+    header nav {
         display: none;
     }
 
     header img {
-        width: 10vw;
+        width: 2rem;
         display: block;
     }
 
@@ -377,7 +383,7 @@ main {
     line-height: 7.5vw;
 }
 
-#servicesHeader img:nth-child(1){
+#servicesHeader img:nth-child(1) {
     height: 12vw;
     width: auto;
     margin-block: auto;
@@ -401,18 +407,16 @@ main {
         width: 20vw;
     }
 
-    #servicesHeader img:nth-child(1){
+    #servicesHeader img:nth-child(1) {
         height: 20vw;
     }
 
-    #servicesHeader img:nth-child(2){
+    #servicesHeader img:nth-child(2) {
         height: 20vw;
     }
 }
 
-@media(min-width: 1000px){
-
-}
+@media(min-width: 1000px) {}
 
 #services {
     width: 100%;
@@ -436,9 +440,9 @@ main {
 }
 
 #services .services-video {
-    width: 40%;
-    overflow: hidden;
-    border-radius: 1vw 10vw 1vw 1vw;
+    width: 45%;
+    overflow-x: hidden;
+    border-radius: 1vw;
     display: flex;
     justify-content: center;
 }
@@ -487,6 +491,13 @@ main {
     color: #232222;
 }
 
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
 @media(max-width: 700px) {
     #services .service-card {
         flex-direction: column-reverse;
@@ -497,6 +508,7 @@ main {
     }
 
     #services .services-video {
+        display: flex;
         width: 100%;
     }
 
@@ -530,7 +542,7 @@ main {
 
 #portfolio {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -567,7 +579,9 @@ main {
     left: 50%;
 }
 
-#portfolio .img4, #portfolio .img5, #portfolio .img6{
+#portfolio .img4,
+#portfolio .img5,
+#portfolio .img6 {
     width: 30vw;
     height: fit-content;
     position: absolute;
@@ -727,7 +741,6 @@ footer button {
     background: royalblue;
     color: white;
     padding: 0.7vw 1vw;
-    padding-left: 0.9em;
     display: flex;
     align-items: center;
     border: none;
