@@ -11,6 +11,20 @@ menuCloseBtn.onclick = () => {
     nav.style.display = "none";
 }
 
+
+function handleResize() {
+    if (window.innerWidth > 700) {
+        menuBtn.style.display = "";
+        nav.style.display = "";
+    }
+    else {
+        menuBtn.style.display = "block";
+        nav.style.display = "none";
+    }
+}
+
+window.addEventListener("resize", handleResize);
+
 // Wrap every letter in a span for ml7
 document.querySelectorAll('.ml7 .letters').forEach(textWrapper => {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -29,7 +43,7 @@ anime.timeline({ loop: false })
         duration: 1500,  // Duration of the fade-in
         easing: "easeInOutQuad"  // Smooth transition
     })
-    
+
     // Then, fade in the text container
     .add({
         targets: '.main-title',
@@ -155,7 +169,7 @@ gsap.to("#servicesHeader img:nth-child(2)", {
     }
 });
 
-if(window.innerWidth < 700){
+if (window.innerWidth < 700) {
     gsap.to("#servicesHeader", {
         opacity: 0,
         scale: .8,
@@ -395,7 +409,7 @@ const obs = new IntersectionObserver((entries) => {
 // obs.observe(video); // Observe the video element
 
 const muteButton = document.getElementById("mute-button");
-muteButton.addEventListener('click', function() {
+muteButton.addEventListener('click', function () {
     if (video.muted) {
         video.muted = false; // Unmute the video
         muteButton.src = "/asset/resource/image/icon/unmute.svg"
@@ -423,6 +437,6 @@ function toggleFullscreen() {
 fullscreenButton.addEventListener('click', toggleFullscreen);
 
 const aboutVideo = document.querySelector(".about-video video");
-if(window.innerWidth < 700){
+if (window.innerWidth < 700) {
     aboutVideo.src = "/asset/resource/video/qdc square logo loop.mp4";
 }
