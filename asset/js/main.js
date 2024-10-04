@@ -26,7 +26,7 @@ function handleResize() {
 window.addEventListener("resize", handleResize);
 
 window.onload = function () {
-    document.getElementsByClassName("autoplay").play();
+    document.getElementById("autoplay1").play();
 }
 // Wrap every letter in a span for ml7
 document.querySelectorAll('.ml7 .letters').forEach(textWrapper => {
