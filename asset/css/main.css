@@ -460,10 +460,6 @@ main {
     flex-direction: column;
 }
 
-iframe {
-    height: 100%;
-}
-
 #services .service-card h1 {
     font-size: 6vw;
     margin-block: 0;
