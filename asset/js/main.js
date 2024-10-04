@@ -40,7 +40,7 @@ anime.timeline({ loop: false })
     .add({
         targets: '#demo-canvas',
         opacity: 1,  // Fade in the canvas
-        duration: 1500,  // Duration of the fade-in
+        duration: 100,  // Duration of the fade-in
         easing: "easeInOutQuad"  // Smooth transition
     })
 
@@ -48,9 +48,9 @@ anime.timeline({ loop: false })
     .add({
         targets: '.main-title',
         opacity: 1,  // Make the text visible
-        duration: 500,  // Duration of the fade-in
+        duration: 200,  // Duration of the fade-in
         easing: "easeInOutQuad",  // Smooth transition
-        offset: '-=500'  // Start this animation slightly before the canvas finishes fading in
+        offset: '-=200'  // Start this animation slightly before the canvas finishes fading in
     })
     // Start the first animation for ml7
     .add({
@@ -59,7 +59,7 @@ anime.timeline({ loop: false })
         translateX: ["0.55em", 0], // Slight horizontal movement
         translateZ: 0,
         rotateZ: [180, 0],         // Rotate from 180 to 0 degrees
-        duration: 750,
+        duration: 300,
         easing: "easeOutExpo",
         delay: (el, i) => 50 * i   // Delay each letter's animation
     })
@@ -72,7 +72,7 @@ anime.timeline({ loop: false })
     .add({
         targets: '.ml10 .letter',
         rotateY: [-90, 0],  // Rotate each letter from -90 to 0 degrees on the Y-axis
-        duration: 1300,
+        duration: 1000,
         delay: (el, i) => 45 * i  // Delay each letter's animation by 45ms
     });
 
